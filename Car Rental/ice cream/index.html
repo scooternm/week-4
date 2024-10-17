@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>
+    <input type="radio" name="container" id="cup"> Cup
+    </label>
+    <label>
+        <input type="radio" name="container" id="scoop"> Cone
+    </label>
+    <fieldset id="toppings">
+        <legend>Toppings</legend>
+    </fieldset>
+</body>
+<script>
+    function onContainerClicked(e){
+        toppings.style.display = cup.checked ? "block" : "none";
+    }
+    cup.addEventListener("click", onContainerClicked);
+    cone.addEventListener("click", onContainerClicked);
+</script>
+</html>
